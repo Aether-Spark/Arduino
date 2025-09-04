@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Storage Monitor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Food Storage Monitor</h1>
+    <ul class="menu">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="info.html">Info Makanan</a></li>
+      <li><a href="#">Deteksi Bau</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Dashboard</h2>
+    <div class="cards">
+      <div class="card suhu">
+        <div class="icon">🌡️</div>
+        <p>Suhu</p>
+        <h3 id="suhu-value">29.7 °C</h3>
+        <span id="suhu-status" class="status">Normal</span>
+      </div>
+      <div class="card kelembaban">
+        <div class="icon">💧</div>
+        <p>Kelembaban</p>
+        <h3 id="kelembaban-value">53.6 %</h3>
+        <span id="kelembaban-status" class="status">Aman</span>
+      </div>
+    </div>
+
+    <div class="charts">
+      <div class="chart-card">
+        <canvas id="suhuChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <canvas id="kelembabanChart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>📦 Sistem Monitoring Lemari Makanan v1.0</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
